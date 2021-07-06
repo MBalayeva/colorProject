@@ -32,7 +32,9 @@ function App() {
             placeholder="#5D3FD3"
             className={error ? "error" : null}
           />
-          <button className="btn">Submit</button>
+          <button type="submit" className="btn">
+            Generate
+          </button>
         </form>
       </section>
       <section className="colors">

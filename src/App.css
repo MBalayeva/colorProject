@@ -1,34 +1,3 @@
-:root {
-  --clr-primary-1: hsl(205, 86%, 17%);
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
-  --clr-primary-5: hsl(205, 78%, 60%);
-  --clr-primary-6: hsl(205, 89%, 70%);
-  --clr-primary-7: hsl(205, 90%, 76%);
-  --clr-primary-8: hsl(205, 86%, 81%);
-  --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
-  --clr-grey-1: hsl(209, 61%, 16%);
-  --clr-grey-2: hsl(211, 39%, 23%);
-  --clr-grey-3: hsl(209, 34%, 30%);
-  --clr-grey-4: hsl(209, 28%, 39%);
-  --clr-grey-10: hsl(210, 36%, 96%);
-  --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
-  --clr-black: #222;
-  --transition: all 0.3s linear;
-  --spacing: 0.1rem;
-  --radius: 0.25rem;
-  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
-  --fixed-width: 620px;
-}
-
 *,
 ::after,
 ::before {
@@ -40,33 +9,20 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
+  background: #f1f5f8;
+  color: #102a42;
   line-height: 1.5;
   font-size: 0.875rem;
-}
-
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  letter-spacing: var(--spacing);
+  letter-spacing: 0.1rem;
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-}
-
-p {
-  margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
 }
 
 .container {
@@ -91,23 +47,23 @@ input {
   border-color: transparent;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
-  border-top-left-radius: var(--radius);
-  border-bottom-left-radius: var(--radius);
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
 }
 
 input.error {
-  border: 2px solid var(--clr-red-dark);
+  border: 2px solid #bb2525;
 }
 
 .btn {
-  background: var(--clr-primary-5);
+  background: #49a6e9;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
   border-color: transparent;
-  border-top-right-radius: var(--radius);
-  border-bottom-right-radius: var(--radius);
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
   text-transform: capitalize;
-  color: var(--clr-white);
+  color: #fff;
   cursor: pointer;
 }
 
@@ -123,25 +79,34 @@ input.error {
   cursor: pointer;
   font-size: 1rem;
   text-transform: none;
+  position: relative;
 }
 
 .percent-value {
   margin-bottom: 0;
-  color: var(--clr-grey-1);
+  color: #102a42;
 }
 .color-value {
-  color: var(--clr-grey-1);
+  color: #102a42;
   margin-bottom: 0;
 }
 .color-light .color-value {
-  color: var(--clr-white);
+  color: #fff;
 }
 .color-light .percent-value {
-  color: var(--clr-white);
+  color: #fff;
+}
+
+.color-light .alert {
+  color: #fff;
 }
 
 .alert {
   text-transform: uppercase;
   font-size: 0.85rem;
-  margin-top: 0.5rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
